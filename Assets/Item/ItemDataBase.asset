@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4aa945e9c14de458d5ab4da62ad576, type: 3}
+  m_Name: ItemDataBase
+  m_EditorClassIdentifier: 
+  itemList:
+  - id: gold
+    itemName: "\u304A\u91D1"
+    itemType: 1
+    sprite: {fileID: 21300000, guid: 93d43b5c925886b40bfc4aedbfc45966, type: 3}
+    buyingPrice: 0
+    sellingPrice: 0
+    information: "\u304A\u91D1\u306F\u5927\u4E8B\u3002"
+  - id: redStuffy
+    itemName: "\u8D64\u3044\u30E0\u30CB\u30E0\u30CB"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 8f844f67042abac4db459bdddbe6b74d, type: 3}
+    buyingPrice: 40
+    sellingPrice: 30
+    information: "\u30B9\u30E9\u30A4\u30E0\u304C\u843D\u3068\u3059\u3002\u30E0\u30CB\u30E0\u30CB\u3057\u3066\u3044\u308B\u3002\u6B66\u5668\u3084\u9632\u5177\u306E\u5F37\u5316\u306B\u4F7F\u3048\u308B\u3002"
+  - id: redJigglyCore
+    itemName: "\u8D64\u3044\u30D7\u30EB\u30D7\u30EB\u30B3\u30A2"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 41e7f6a34281fe64f8ccdec3ea4af728, type: 3}
+    buyingPrice: 60
+    sellingPrice: 50
+    information: "\u30B9\u30E9\u30A4\u30E0\u306E\u30B3\u30A2\u3002\u30B9\u30E9\u30A4\u30E0\u307F\u305F\u3044\u306A\u89E6\u308A\u5FC3\u5730\u3002\u6B66\u5668\u3084\u9632\u5177\u306E\u5F37\u5316\u306B\u4F7F\u3048\u308B\u3002"
+  - id: frogHorn
+    itemName: "\u89D2"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 26b885c3d07c9924db74266c1cff88ce, type: 3}
+    buyingPrice: 80
+    sellingPrice: 60
+    information: "\u30DC\u30B9\u306E\u89D2\u3002\u6B66\u5668\u3084\u9632\u5177\u306E\u5F37\u5316\u306B\u4F7F\u3048\u308B\u3002"
+  - id: frog'sPearl
+    itemName: "\u78A7\u73E0"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 370a64e484d0b904284c303302d5a503, type: 3}
+    buyingPrice: 80
+    sellingPrice: 60
+    information: "\u30DC\u30B9\u306E\u4F53\u306E\u4E2D\u306B\u3042\u308B\u73E0\u3002\u6B66\u5668\u3084\u9632\u5177\u306E\u5F37\u5316\u306B\u4F7F\u3048\u308B\u3002"
+  - id: frog'sGoldenBeads
+    itemName: "\u9EC4\u91D1\u73E0"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: d7c9d70146846484c9df3f5964afdb46, type: 3}
+    buyingPrice: 100
+    sellingPrice: 80
+    information: "\u30DC\u30B9\u306E\u4F53\u5185\u306B\u3042\u308B\u73E0\u3002\u3068\u3066\u3082\u30EC\u30A2\u3002\u6B66\u5668\u3084\u9632\u5177\u306E\u5F37\u5316\u306B\u4F7F\u3048\u308B\u3002"
+  - id: frog'sBlackJewel
+    itemName: "\u9ED2\u5B9D\u73E0"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 9efdf9f9cb1a09847ba9ddc0956012d8, type: 3}
+    buyingPrice: 200
+    sellingPrice: 100
+    information: "\u30DC\u30B9\u306E\u4F53\u5185\u306B\u3042\u308B\u73E0\u3002\u3081\u3063\u305F\u306B\u898B\u306A\u3044\u3002\u6B66\u5668\u3084\u9632\u5177\u306E\u5F37\u5316\u306B\u4F7F\u3048\u308B\u3002"
+  - id: lotusLeaf
+    itemName: "\u30CF\u30B9\u306E\u8449\u3063\u3071"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 737916222c0f8a24abcb7a6d002200a7, type: 3}
+    buyingPrice: 60
+    sellingPrice: 40
+    information: "\u305F\u3060\u306E\u8449\u3063\u3071\u3002\u3084\u304F\u306B\u306F\u7ACB\u305F\u306A\u3044\u3002"
+  - id: scarabSwallowtail
+    itemName: "\u30B3\u30AC\u30CD\u30A2\u30B2\u30CF"
+    itemType: 0
+    sprite: {fileID: 21300000, guid: 8dae87e812f7cbd40b9ed760e13bfbe7, type: 3}
+    buyingPrice: 100
+    sellingPrice: 60
+    information: "\u30AD\u30E9\u30AD\u30E9\u5149\u3063\u3066\u3044\u308B\u8776\u3005\u3002\u9C57\u7C89\u306F\u6B66\u5668\u3084\u9632\u5177\u3092\u5F37\u5316\u3059\u308B\u306E\u306B\u4F7F\u3048\u308B\u3002"
