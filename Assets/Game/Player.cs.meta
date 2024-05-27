@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0df2a27d65f8760428a0360238a812c2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - hitParticleObject: {instanceID: 0}
+  - pause: {fileID: 4262862238501506793, guid: e0cd1474f735e814194491fa1ce39e4d, type: 3}
+  - audioSource: {instanceID: 0}
+  - attackSound: {fileID: 8300000, guid: 1b8f455c7b062fd4bb2bc1592380de89, type: 3}
+  - hitSound: {fileID: 8300000, guid: b5c7295a6c1f07f45b308a916daf9ad6, type: 3}
+  - moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
