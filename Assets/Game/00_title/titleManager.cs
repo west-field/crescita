@@ -11,11 +11,22 @@ public class titleManager : MonoBehaviour
     [SerializeField] private MainManager manager;//メインマネージャー
     private InputAction move,submit, cancel;//アクションマップからアクションの取得
 
-    private bool isEnterName;//ログイン画面を表示させるかどうか
+    private bool isSubmit;//決定を押したかどうか
     private bool isCreate;//アカウントを作成するかどうか
     private bool isSelect;//押したかどうか
 
-    [SerializeField] private new GameObject name;
+    /// <summary>
+    /// 名前入力
+    /// </summary>
+    [SerializeField] private GameObject nameInput;
+    /// <summary>
+    /// タイトルロゴ
+    /// </summary>
+    [SerializeField] private GameObject titleLogo;
+    /// <summary>
+    /// オプション
+    /// </summary>
+    [SerializeField] private GameObject optionObject;
 
     /*名前、パスワード*/
     [SerializeField] private TMP_InputField enterName, enterPass;//名前の入力,パスワードの入力
@@ -42,11 +53,23 @@ public class titleManager : MonoBehaviour
     /// <summary>
     /// フレームの位置を取得
     /// </summary>
-    [SerializeField] private Transform createPos, roginPos;
+    [SerializeField] private Transform createPos, roginPos, optionPos;
     /// <summary>
     /// フレームの位置を決める
     /// </summary>
-    [SerializeField] private bool isCreateButton;
+    //[SerializeField] private bool isCreateButton;
+
+    //選んだ種類
+    enum MenuItem
+    { 
+        create,
+        rogin,
+        option,
+
+        menuNum
+    };
+
+    private MenuItem menuItem;
 
     void Start()
     {
@@ -58,7 +81,8 @@ public class titleManager : MonoBehaviour
 
         scalingSprit.Init(0.9f, 0.7f);
 
-        isCreateButton = false;
+        menuItem = MenuItem.create;
+        scalingSprit.ScalingObjPosition(selectFrame.transform, createPos.position);
 
         Init();
     }
@@ -73,9 +97,11 @@ public class titleManager : MonoBehaviour
 
         //enterName.text = "crescita";
         //enterPass.text = "12345";
-        name.gameObject.SetActive(false);
+        nameInput.SetActive(false);
+        titleLogo.SetActive(true);
+        optionObject.SetActive(false);
 
-        isEnterName = false;
+        isSubmit = false;
 
         isCreate = false;
 
@@ -93,37 +119,71 @@ public class titleManager : MonoBehaviour
 
         scalingSprit.ScalingObj(selectFrame.transform);//拡大縮小
 
-        if (isEnterName)
+        if(isSubmit)
         {
-            NameAndPassword();
-            return;
+            switch (menuItem)
+            {
+                case MenuItem.create:
+                case MenuItem.rogin:
+                    NameAndPassword();
+                    return;
+                case MenuItem.option:
+                    //戻るを押したとき元の画面に戻る
+                    if (cancel.WasPressedThisFrame())
+                    {
+                        Init();
+                    }
+                    return;
+            }
+
         }
 
-        //選択しているほうにフレームを移動
+        //選択
         if (move.WasPressedThisFrame())
         {
-            isCreateButton = !isCreateButton;
+            var value = move.ReadValue<Vector2>();
+            var menuNum = (int)MenuItem.menuNum;
+            if(value.y < 0 || value.x > 0)
+            {
+                menuItem = (MenuItem)(((int)menuItem + 1) % menuNum);
+            }
+            else if(value.y > 0 || value.x < 0)
+            {
+                menuItem = (MenuItem)(((int)menuItem + (menuNum - 1)) % menuNum);
+            }
 
-            if (isCreateButton)
+            switch (menuItem)
             {
-                scalingSprit.ScalingObjPosition(selectFrame.transform, createPos.position);
+                case MenuItem.create:
+                default:
+                    scalingSprit.ScalingObjPosition(selectFrame.transform, createPos.position);
+                    break;
+                case MenuItem.rogin:
+                    scalingSprit.ScalingObjPosition(selectFrame.transform, roginPos.position);
+                    break;
+                case MenuItem.option:
+                    scalingSprit.ScalingObjPosition(selectFrame.transform, optionPos.position);
+                    break;
             }
-            else
-            {
-                scalingSprit.ScalingObjPosition(selectFrame.transform, roginPos.position);
-            }
+            
         }
 
         //決定を押したとき
         if (submit.WasPressedThisFrame())
         {
-            if (isCreateButton)
+            switch(menuItem)
             {
-                CreateButtomClick();
-            }
-            else
-            {
-                LoginButtomClick();
+                case MenuItem.create:
+                    Create();
+                    break;
+                case MenuItem.rogin:
+                    Login();
+                    break;
+                case MenuItem.option:
+                    Option();
+                    break;
+                default:
+                    break ;
             }
         }
     }
@@ -217,7 +277,6 @@ public class titleManager : MonoBehaviour
         }
         else
         {
-            nextText.text = "次へ　Aボタン or enter";
             nextText.enabled = false;
             isSelect = false;
         }
@@ -226,25 +285,36 @@ public class titleManager : MonoBehaviour
     /// <summary>
     /// アカウントを作成する
     /// </summary>
-    public void CreateButtomClick()
+    public void Create()
     {
         //音を鳴らす
         audioSource.PlayOneShot(directionSound);
 
         isCreate = true;
-        name.gameObject.SetActive(true);
-        isEnterName = true;
+        nameInput.SetActive(true);
+        titleLogo.SetActive(false);
+        isSubmit = true;
     }
     /// <summary>
     /// アカウントの名前とパスワードでログインする
     /// </summary>
-    public void LoginButtomClick()
+    public void Login()
     {
         //音を鳴らす
         audioSource.PlayOneShot(directionSound);
 
         isCreate = false;
-        name.gameObject.SetActive(true);
-        isEnterName = true;
+        nameInput.SetActive(true);
+        titleLogo.SetActive(false);
+        isSubmit = true;
+    }
+
+    public void Option()
+    {
+        //音を鳴らす
+        audioSource.PlayOneShot(directionSound);
+        optionObject.SetActive(true);
+        titleLogo.SetActive(false);
+        isSubmit = true;
     }
 }

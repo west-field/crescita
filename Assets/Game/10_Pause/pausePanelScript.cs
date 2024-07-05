@@ -118,7 +118,7 @@ public class pausePanelScript : MonoBehaviourPunCallbacks
 
         scalingScript.Init(0.9f, 0.7f);
         //フレームの位置を戻るの位置にする
-        scalingScript.ScalingObjPosition(selectFrameObj.transform, new Vector3(800, 275/*-175*/, 0));
+        scalingScript.ScalingObjPosition(selectFrameObj.transform, text[(int)PauseItem.back].transform.position);
 
         //自身(ポーズパネル)を表示
         PanelChange(true);
