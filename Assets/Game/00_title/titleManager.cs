@@ -15,6 +15,7 @@ public class titleManager : MonoBehaviour
     private bool isCreate;//アカウントを作成するかどうか
     private bool isSelect;//押したかどうか
 
+    [Header("Rogin")]
     /// <summary>
     /// 名前入力
     /// </summary>
@@ -23,10 +24,6 @@ public class titleManager : MonoBehaviour
     /// タイトルロゴ
     /// </summary>
     [SerializeField] private GameObject titleLogo;
-    /// <summary>
-    /// オプション
-    /// </summary>
-    [SerializeField] private GameObject optionObject;
 
     /*名前、パスワード*/
     [SerializeField] private TMP_InputField enterName, enterPass;//名前の入力,パスワードの入力
@@ -37,11 +34,13 @@ public class titleManager : MonoBehaviour
     private bool isLogin;//ログインできるかどうか
     [SerializeField] private rogin roginScript;//通信
     [SerializeField] private TextMeshProUGUI nextText;//InputFieldの下にあるテキスト
-    
+
     /*音*/
+    [Header("Sound")]
     [SerializeField] private AudioSource audioSource;//サウンド
     [SerializeField] private AudioClip directionSound, noGoodSound;//押したときの音,ダメな時の音
 
+    [Header("Frame")]
     /// <summary>
     /// フレーム
     /// </summary>
@@ -49,22 +48,17 @@ public class titleManager : MonoBehaviour
     /// <summary>
     /// フレームの拡大縮小
     /// </summary>
-    [SerializeField] private Scaling scalingSprit;
+    [SerializeField] private Scaling scalingScprit;
     /// <summary>
     /// フレームの位置を取得
     /// </summary>
-    [SerializeField] private Transform createPos, roginPos, optionPos;
-    /// <summary>
-    /// フレームの位置を決める
-    /// </summary>
-    //[SerializeField] private bool isCreateButton;
+    [SerializeField] private Transform createPos, roginPos;
 
     //選んだ種類
     enum MenuItem
     { 
         create,
         rogin,
-        option,
 
         menuNum
     };
@@ -79,10 +73,10 @@ public class titleManager : MonoBehaviour
 
         audioSource.volume = HoldVariable.SEVolume;
 
-        scalingSprit.Init(0.9f, 0.7f);
+        scalingScprit.Init(0.9f, 0.7f);
 
         menuItem = MenuItem.create;
-        scalingSprit.ScalingObjPosition(selectFrame.transform, createPos.position);
+        scalingScprit.ScalingObjPosition(selectFrame.transform, createPos.position);
 
         Init();
     }
@@ -99,7 +93,6 @@ public class titleManager : MonoBehaviour
         //enterPass.text = "12345";
         nameInput.SetActive(false);
         titleLogo.SetActive(true);
-        optionObject.SetActive(false);
 
         isSubmit = false;
 
@@ -110,14 +103,14 @@ public class titleManager : MonoBehaviour
         isSelect = false;
 
         nextText.enabled = false;
-        nextText.text = "次へ　Aボタン or enter";
+        nextText.text = "";
     }
 
     private void Update()
     {
         if (manager.IsChangeScene()) return;
 
-        scalingSprit.ScalingObj(selectFrame.transform);//拡大縮小
+        scalingScprit.ScalingObj(selectFrame.transform);//拡大縮小
 
         if(isSubmit)
         {
@@ -127,12 +120,7 @@ public class titleManager : MonoBehaviour
                 case MenuItem.rogin:
                     NameAndPassword();
                     return;
-                case MenuItem.option:
-                    //戻るを押したとき元の画面に戻る
-                    if (cancel.WasPressedThisFrame())
-                    {
-                        Init();
-                    }
+                default:
                     return;
             }
 
@@ -156,13 +144,10 @@ public class titleManager : MonoBehaviour
             {
                 case MenuItem.create:
                 default:
-                    scalingSprit.ScalingObjPosition(selectFrame.transform, createPos.position);
+                    scalingScprit.ScalingObjPosition(selectFrame.transform, createPos.position);
                     break;
                 case MenuItem.rogin:
-                    scalingSprit.ScalingObjPosition(selectFrame.transform, roginPos.position);
-                    break;
-                case MenuItem.option:
-                    scalingSprit.ScalingObjPosition(selectFrame.transform, optionPos.position);
+                    scalingScprit.ScalingObjPosition(selectFrame.transform, roginPos.position);
                     break;
             }
             
@@ -178,9 +163,6 @@ public class titleManager : MonoBehaviour
                     break;
                 case MenuItem.rogin:
                     Login();
-                    break;
-                case MenuItem.option:
-                    Option();
                     break;
                 default:
                     break ;
@@ -305,15 +287,6 @@ public class titleManager : MonoBehaviour
 
         isCreate = false;
         nameInput.SetActive(true);
-        titleLogo.SetActive(false);
-        isSubmit = true;
-    }
-
-    public void Option()
-    {
-        //音を鳴らす
-        audioSource.PlayOneShot(directionSound);
-        optionObject.SetActive(true);
         titleLogo.SetActive(false);
         isSubmit = true;
     }
