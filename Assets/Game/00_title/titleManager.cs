@@ -65,6 +65,10 @@ public class titleManager : MonoBehaviour
 
     private MenuItem menuItem;
 
+    //ToDo メニューの中に設定を追加する
+    //MenuItem.setting = 3
+    //音量設定、ウィンドウモード変更、キー設定、閉じる、ゲーム終了
+
     void Start()
     {
         move = manager.GetPlayerInput().actions["move"];
@@ -89,8 +93,10 @@ public class titleManager : MonoBehaviour
         enterName.Select();
         isName = false;
 
-        //enterName.text = "crescita";
-        //enterPass.text = "12345";
+#if UNITY_EDITOR
+        enterName.text = "crescita";
+        enterPass.text = "12345";
+#endif
         nameInput.SetActive(false);
         titleLogo.SetActive(true);
 

@@ -758,7 +758,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             
             //テキストに表示する
             var str = $"あと{(int)backCityTime}秒で\n街にもどります。";
-            mainCanvas.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = str;
+            mainCanvas.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = str;
             
             //街に戻る
             if (backCityTime < 0.0f)

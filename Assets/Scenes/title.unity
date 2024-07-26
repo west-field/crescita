@@ -3427,6 +3427,8 @@ MonoBehaviour:
   nextText: {fileID: 1666995805}
   itemData: {fileID: 1753555559}
   startas: {fileID: 1753555560}
+  playerName: {fileID: 1949386040}
+  password: {fileID: 87245470}
 --- !u!114 &1753555557
 MonoBehaviour:
   m_ObjectHideFlags: 0
