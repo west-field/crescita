@@ -251,8 +251,12 @@ public class PlayerStartas : MonoBehaviourPunCallbacks
             Debug.Log(onlineStartas.levelPoint + "+" + levelPoint);
             onlineStartas.levelPoint += levelPoint;
 
+            //1レベルの時　0 + 100 = 100
+            //2レベルの時　100 + 200 = 300
+            var onlineLevelPoint = ((onlineStartas.level - 1) * 100 + onlineStartas.level * 100);
+
             //レベルポイントがlevel×10よりも大きいとき
-            if (onlineStartas.levelPoint >= onlineStartas.level * 100)
+            if (onlineStartas.levelPoint >= onlineLevelPoint)
             {
                 //攻撃力
                 onlineStartas.attack += onlineStartas.level;
@@ -270,8 +274,10 @@ public class PlayerStartas : MonoBehaviourPunCallbacks
         Debug.Log(HoldVariable.startas.levelPoint + "+" + levelPoint);
         HoldVariable.startas.levelPoint += levelPoint;
 
+        var holdLevelPoint = ((HoldVariable.startas.level - 1) * 100 + HoldVariable.startas.level * 100);
+
         //レベルポイントがlevel×10よりも大きいとき
-        if (HoldVariable.startas.levelPoint >= HoldVariable.startas.level* 100)
+        if (HoldVariable.startas.levelPoint >= holdLevelPoint)
         {
             //攻撃力
             HoldVariable.startas.attack += HoldVariable.startas.level;
@@ -351,9 +357,9 @@ public class PlayerStartas : MonoBehaviourPunCallbacks
         // ルームに参加している場合は処理をする
         if (PhotonNetwork.InRoom)
         {
-            return onlineStartas.level * 100 - onlineStartas.levelPoint;
+            return ((onlineStartas.level - 1) * 100 + onlineStartas.level * 100) - onlineStartas.levelPoint;
         }
-        return HoldVariable.startas.level * 100 - HoldVariable.startas.levelPoint;
+        return ((HoldVariable.startas.level - 1) * 100 + HoldVariable.startas.level * 100) - HoldVariable.startas.levelPoint;
     }
 
     /// <summary>

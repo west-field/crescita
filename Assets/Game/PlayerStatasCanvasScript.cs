@@ -54,23 +54,36 @@ public class PlayerStatasCanvasScript : MonoBehaviour
             Debug.Log("playerStartas ない");
         }
 
-        //レベル表示と今のレベルが違う時
-        if (level != HoldVariable.startas.level)
-        {
-            level = HoldVariable.startas.level;
-            //今のレベルを表示する
-            levelText.text = $"{HoldVariable.startas.level}";
-        }
+        ////レベル表示と今のレベルが違う時
+        //if (level != HoldVariable.startas.level)
+        //{
+        //    level = HoldVariable.startas.level;
+        //    //今のレベルを表示する
+        //    levelText.text = $"{HoldVariable.startas.level}";
+        //}
 
-        if (levelPoint != HoldVariable.startas.levelPoint)
-        {
-            levelPoint = HoldVariable.startas.levelPoint;
-            //経験値を計算する
-            var point = HoldVariable.startas.level * 100 - HoldVariable.startas.levelPoint;
+        //if (levelPoint != HoldVariable.startas.levelPoint)
+        //{
+        //    levelPoint = HoldVariable.startas.levelPoint;
+        //    //経験値を計算する
+        //    var point = ((HoldVariable.startas.level - 1) * 100 + HoldVariable.startas.level * 100) - HoldVariable.startas.levelPoint;
 
-            //レベルアップのためのポイントを表示する
-            levelPointText.text = $"あと{point}";
-        }
+        //    //レベルアップのためのポイントを表示する
+        //    levelPointText.text = $"あと{point}";
+        //}
+        
+        //レベルを表示させる
+        level = startas.GetStartas().level;
+        //今のレベルを表示する
+        levelText.text = $"{startas.GetStartas().level}";
+
+        //経験値を表示させる
+        levelPoint = startas.GetStartas().levelPoint;
+        //経験値を計算する
+        var point = ((startas.GetStartas().level - 1) * 100 + startas.GetStartas().level * 100) - startas.GetStartas().levelPoint;
+        //レベルアップのためのポイントを表示する
+        levelPointText.text = $"あと{point}";
+
     }
 
     private void FixedUpdate()
@@ -89,7 +102,7 @@ public class PlayerStatasCanvasScript : MonoBehaviour
             {
                 levelPoint = startas.GetStartas().levelPoint;
                 //経験値を計算する
-                var point = startas.GetStartas().level * 100 - startas.GetStartas().levelPoint;
+                var point = ((startas.GetStartas().level - 1) * 100 + startas.GetStartas().level * 100) - startas.GetStartas().levelPoint;
 
                 //レベルアップのためのポイントを表示する
                 levelPointText.text = $"あと{point}";
