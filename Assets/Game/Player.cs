@@ -439,13 +439,13 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             }
         }
 
-        //座っている時は何もできない
+        //座っている時はジャンプ以外できない
         if (isSit) return;
         Block();
         Fire();
-        //ブロックしている時は動けない
-        if (isBlock) return;
         Move();
+        //ブロックしている時は走れない
+        if (isBlock) return;
         Run();
     }
 
@@ -523,8 +523,8 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         //アクション開始から終了まで
         isWalkAnim = move.IsPressed();
 
-        //移動ボタンを押していない || ブロックをしているとき
-        if (!isWalkAnim || isBlock)
+        //移動ボタンを押していないとき
+        if (!isWalkAnim )
         {
             return;
         }
@@ -610,6 +610,8 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             audioSource.PlayOneShot(attackSound);
             //武器の当たり判定をtrueにする
             isWeponEnable = true;
+            //攻撃している時は防御判定を行わないように
+            isBlock = false;
             return;
         }
         //次に攻撃できるまでの時間がまだあるとき
@@ -639,11 +641,19 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             //ジャンプキーが押されているとき
             if (jump.WasPressedThisFrame())
             {
+                //座っていた時
+                if (isSit)
+                {
+                    isSit = false;
+                    animator.SetBool("sit", isSit);
+                }
+
                 //ジャンプの速度を計算
                 var jumpVelocity = Vector3.up * (moveSpeed * 1.0f);
                 
                 rigid.AddForce(jumpVelocity, ForceMode.Impulse);
                 animator.SetBool("jump", true);
+
                 isGrounded = false;
             }
         }
@@ -664,8 +674,6 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             return;
         }
 
-        //移動できないようにする
-        isWalkAnim = false;
         isRunAnim = false;
     }
 
