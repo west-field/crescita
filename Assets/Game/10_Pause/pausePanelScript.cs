@@ -336,6 +336,10 @@ public class pausePanelScript : MonoBehaviourPunCallbacks
                     PanelChange(false);
                     break;
                 case (int)PauseItem.titleBack:
+                    //アイテム、ステータス情報を保存
+                    this.transform.GetComponent<ItemDataLoadOrSave>().SaveItemData(); 
+                    this.transform.GetComponent<StartasLoadOrSave>().SaveStartasData();
+                    
                     drawType = PauseItem.titleBack;
                     break;
                 case (int)PauseItem.gameEnd:
