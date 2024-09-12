@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 37598827}
   m_Layer: 0
   m_Name: Plane_Up_quest
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 84934654}
   m_Layer: 0
   m_Name: Plane_Up_Left_back
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 100564624}
   m_Layer: 0
   m_Name: Plane_Up_quest_Left_back
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 179340861}
   m_Layer: 0
   m_Name: Plane_Left
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,6 +1981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cabinet_medium_decorated
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6aedfb1edfdeb8b4297fd8592496a570,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aedfb1edfdeb8b4297fd8592496a570, type: 3}
@@ -3397,6 +3402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_A_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
 --- !u!1 &498547012 stripped
@@ -4278,7 +4288,7 @@ GameObject:
   - component: {fileID: 629065495}
   m_Layer: 0
   m_Name: Plane_Up
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4700,7 +4710,7 @@ GameObject:
   - component: {fileID: 665194534}
   m_Layer: 0
   m_Name: Plane_DownRight
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5318,7 +5328,7 @@ GameObject:
   - component: {fileID: 703266494}
   m_Layer: 0
   m_Name: Plane_Up_quest_Left
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5467,7 +5477,7 @@ GameObject:
   - component: {fileID: 746189606}
   m_Layer: 0
   m_Name: Plane_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6166,6 +6176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shelf_B_large_decorated
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2c3e9146c085034c88a36b3081636c2,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c3e9146c085034c88a36b3081636c2, type: 3}
@@ -6877,7 +6892,7 @@ GameObject:
   - component: {fileID: 908272218}
   m_Layer: 0
   m_Name: Plane_DownLeft
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7268,7 +7283,7 @@ GameObject:
   - component: {fileID: 959997204}
   m_Layer: 0
   m_Name: Plane_Up_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7569,7 +7584,7 @@ GameObject:
   - component: {fileID: 994701761}
   m_Layer: 0
   m_Name: Plane_Down
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7950,7 +7965,7 @@ GameObject:
   - component: {fileID: 1054090510}
   m_Layer: 0
   m_Name: Plane_Down_Left
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8048,7 +8063,7 @@ GameObject:
   - component: {fileID: 1076613197}
   m_Layer: 0
   m_Name: Plane_Down
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9253,7 +9268,7 @@ GameObject:
   - component: {fileID: 1316548216}
   m_Layer: 0
   m_Name: Plane_Down_Left
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10045,6 +10060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_B_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8122b04f2f1be6f42bc5447fcd111b21,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8122b04f2f1be6f42bc5447fcd111b21, type: 3}
 --- !u!1 &1420005489 stripped
@@ -10475,7 +10495,7 @@ GameObject:
   - component: {fileID: 1531434097}
   m_Layer: 0
   m_Name: Plane_Down_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10573,7 +10593,7 @@ GameObject:
   - component: {fileID: 1598867639}
   m_Layer: 0
   m_Name: Plane_Down
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11438,7 +11458,7 @@ GameObject:
   - component: {fileID: 1680000716}
   m_Layer: 0
   m_Name: Plane_Down_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13152,6 +13172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_A_wood (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
 --- !u!1 &1857041160 stripped
@@ -14073,7 +14098,7 @@ GameObject:
   - component: {fileID: 1966719480}
   m_Layer: 0
   m_Name: Plane_Up_quest_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14171,7 +14196,7 @@ GameObject:
   - component: {fileID: 1983813784}
   m_Layer: 0
   m_Name: Plane_Up_quest
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14435,6 +14460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_A_wood (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
@@ -14875,6 +14905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: table_medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24047de89a79812459608c423d402e9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24047de89a79812459608c423d402e9c, type: 3}
@@ -15553,7 +15588,7 @@ GameObject:
   - component: {fileID: 2116222671}
   m_Layer: 0
   m_Name: Plane_Up_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

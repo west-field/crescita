@@ -769,6 +769,34 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        // ルームに参加している場合は処理をする
+        if (PhotonNetwork.InRoom)
+        {
+            // 自身が生成したオブジェクトだけに処理を行う
+            if (!photonView.IsMine)
+            {
+                return;
+            }
+        }
+
+        //生きていないときは何もしない
+        if (!startas.IsAlive())
+        {
+            return;
+        }
+
+        if (!isGrounded)
+        {
+            if (collision.gameObject.tag != "wall")
+            {
+                Debug.Log("Player ジャンプできるように");
+                isGrounded = true;
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // ルームに参加している場合は処理をする
@@ -787,11 +815,11 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             return;
         }
 
-        if (other.gameObject.tag != "wall")
-        {
-            Debug.Log("Player ジャンプできるように");
-            isGrounded = true;
-        }
+        //if (other.gameObject.tag != "wall")
+        //{
+        //    Debug.Log("Player ジャンプできるように");
+        //    isGrounded = true;
+        //}
 
         //アイテムタグかどうか
         if (other.gameObject.tag == "item")

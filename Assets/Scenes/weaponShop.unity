@@ -5622,6 +5622,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pictureframe_standing_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd4f7c7007257cd4a8fb7d8ea9d0876a,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd4f7c7007257cd4a8fb7d8ea9d0876a, type: 3}
 --- !u!4 &654763113 stripped
@@ -6500,6 +6505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: table_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14b3276794a1dd84ca0bf5cb8c18d764,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14b3276794a1dd84ca0bf5cb8c18d764, type: 3}
@@ -7544,6 +7554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_stool_wood (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 89ef05ebfe6105645bfa54c45ab5b08e,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89ef05ebfe6105645bfa54c45ab5b08e, type: 3}
@@ -12924,7 +12939,7 @@ GameObject:
   - component: {fileID: 1588556157}
   m_Layer: 0
   m_Name: wall
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13240,6 +13255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_stool_wood
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 89ef05ebfe6105645bfa54c45ab5b08e,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89ef05ebfe6105645bfa54c45ab5b08e, type: 3}
 --- !u!4 &1612387804 stripped
@@ -13470,6 +13490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: couch_pillows
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6c197d791a543ed49a002b124a15156c,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c197d791a543ed49a002b124a15156c, type: 3}

@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 30119109}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 55381278}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1358,6 +1358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cabinet_small_decorated
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a49922f70f61fbd4aa1a8def4865e683,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49922f70f61fbd4aa1a8def4865e683, type: 3}
 --- !u!1 &96958041 stripped
@@ -1872,6 +1877,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cactus_medium_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08d3fbf01fc53254dae2690867aa0a12,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d3fbf01fc53254dae2690867aa0a12, type: 3}
 --- !u!4 &119317145 stripped
@@ -2074,6 +2084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: table_medium
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24047de89a79812459608c423d402e9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24047de89a79812459608c423d402e9c, type: 3}
 --- !u!4 &124328402 stripped
@@ -2121,7 +2136,7 @@ GameObject:
   - component: {fileID: 125793213}
   m_Layer: 0
   m_Name: Plane (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2784,9 +2799,8 @@ GameObject:
   m_Component:
   - component: {fileID: 174207235}
   - component: {fileID: 174207236}
-  - component: {fileID: 174207237}
   m_Layer: 0
-  m_Name: col
+  m_Name: col_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2820,19 +2834,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5265579, y: 0.25870454, z: 7.027894}
   m_Center: {x: 0.018805504, y: 0.120645106, z: 0.49402475}
---- !u!65 &174207237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 174207234}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16985989, y: 0.61997247, z: 6.501973}
-  m_Center: {x: 0.80118036, y: 0.40149897, z: 0.83655113}
 --- !u!1001 &185724989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3228,7 +3229,7 @@ GameObject:
   - component: {fileID: 194474845}
   m_Layer: 0
   m_Name: Plane (18)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3421,7 +3422,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e084f304ff7628e4a9056df98103dd20,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e084f304ff7628e4a9056df98103dd20,
         type: 3}
@@ -3488,6 +3489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stucco_Block (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e084f304ff7628e4a9056df98103dd20,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e084f304ff7628e4a9056df98103dd20, type: 3}
 --- !u!4 &214976597 stripped
@@ -3510,7 +3516,7 @@ GameObject:
   - component: {fileID: 217229179}
   m_Layer: 0
   m_Name: Plane (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3880,7 +3886,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e084f304ff7628e4a9056df98103dd20,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e084f304ff7628e4a9056df98103dd20,
         type: 3}
@@ -3946,6 +3952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stucco_Block (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e084f304ff7628e4a9056df98103dd20,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e084f304ff7628e4a9056df98103dd20, type: 3}
@@ -4859,7 +4870,7 @@ GameObject:
   - component: {fileID: 301319073}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5451,6 +5462,7 @@ Transform:
   - {fileID: 1337480936}
   - {fileID: 743056963}
   - {fileID: 174207235}
+  - {fileID: 1128477512}
   - {fileID: 2058998884}
   - {fileID: 214976597}
   - {fileID: 229386364}
@@ -5570,7 +5582,7 @@ GameObject:
   - component: {fileID: 344959010}
   m_Layer: 0
   m_Name: Plane (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6474,7 +6486,7 @@ GameObject:
   - component: {fileID: 406988482}
   m_Layer: 0
   m_Name: Plane (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6739,6 +6751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shelf_B_large
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4458eb08d16ab724daa503e8ad038a45,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4458eb08d16ab724daa503e8ad038a45, type: 3}
@@ -7714,7 +7731,7 @@ GameObject:
   - component: {fileID: 483094198}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8158,6 +8175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cactus_medium_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73000821f5f97114aa5ad8630d2bac52,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73000821f5f97114aa5ad8630d2bac52, type: 3}
 --- !u!1 &506918218 stripped
@@ -8414,6 +8436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: book_set
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71ed46fb63f139c40b218ae36aad71f7,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ed46fb63f139c40b218ae36aad71f7, type: 3}
@@ -8796,6 +8823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pictureframe_small_B (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 355d58f128290284ba99817f6443db3f,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d58f128290284ba99817f6443db3f, type: 3}
@@ -9304,7 +9336,7 @@ GameObject:
   - component: {fileID: 632752467}
   m_Layer: 0
   m_Name: Plane (19)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10295,6 +10327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cactus_medium_A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73000821f5f97114aa5ad8630d2bac52,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73000821f5f97114aa5ad8630d2bac52, type: 3}
@@ -11792,7 +11829,7 @@ GameObject:
   - component: {fileID: 866124308}
   m_Layer: 0
   m_Name: table
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12414,7 +12451,7 @@ GameObject:
   - component: {fileID: 882455119}
   m_Layer: 0
   m_Name: Plane (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13458,7 +13495,7 @@ GameObject:
   - component: {fileID: 947988371}
   m_Layer: 0
   m_Name: Plane (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13741,6 +13778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pictureframe_small_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 355d58f128290284ba99817f6443db3f,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d58f128290284ba99817f6443db3f, type: 3}
@@ -14121,6 +14163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rogue (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ced80e9a70ac3fb4a8a1eec0ca215439,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4042940087036422592, guid: ced80e9a70ac3fb4a8a1eec0ca215439,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14344,7 +14391,7 @@ GameObject:
   - component: {fileID: 1000677779}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14442,7 +14489,7 @@ GameObject:
   - component: {fileID: 1003340882}
   m_Layer: 0
   m_Name: Plane (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14827,7 +14874,7 @@ GameObject:
   - component: {fileID: 1022322246}
   m_Layer: 0
   m_Name: Plane (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14997,7 +15044,7 @@ GameObject:
   - component: {fileID: 1035320270}
   m_Layer: 0
   m_Name: table_oku
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15477,7 +15524,7 @@ GameObject:
   - component: {fileID: 1071363251}
   m_Layer: 0
   m_Name: Plane (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15669,7 +15716,7 @@ GameObject:
   - component: {fileID: 1082075640}
   m_Layer: 0
   m_Name: Plane (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15827,6 +15874,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbbce463b64ec9d4385c6f06699b5a41, type: 3}
+--- !u!1 &1128477511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128477512}
+  - component: {fileID: 1128477513}
+  m_Layer: 0
+  m_Name: col_2
+  m_TagString: wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1128477512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128477511}
+  m_LocalRotation: {x: -0.22920047, y: 0, z: 0, w: 0.97337925}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 327511177}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: -26.5, y: 0, z: 0}
+--- !u!65 &1128477513
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128477511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16985989, y: 0.61997247, z: 6.501973}
+  m_Center: {x: 0.80118036, y: 0.40149897, z: 0.83655113}
 --- !u!1001 &1136761122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16237,6 +16329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cactus_small_A
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e7985162652eb3747ba6867c2eaf2200,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7985162652eb3747ba6867c2eaf2200, type: 3}
 --- !u!4 &1159120364 stripped
@@ -16331,6 +16428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rug_rectangle_stripes_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db6fe808dae96444e8b0816a4acd0129,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6fe808dae96444e8b0816a4acd0129, type: 3}
@@ -16455,7 +16557,7 @@ GameObject:
   - component: {fileID: 1189173111}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16746,7 +16848,7 @@ GameObject:
   - component: {fileID: 1206443502}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16841,7 +16943,7 @@ GameObject:
   - component: {fileID: 1228337914}
   m_Layer: 0
   m_Name: table (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16962,6 +17064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_A_wood (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
 --- !u!1 &1240887249 stripped
@@ -17003,7 +17110,7 @@ GameObject:
   - component: {fileID: 1242351402}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17714,6 +17821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shelf_B_large_decorated
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2c3e9146c085034c88a36b3081636c2,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c3e9146c085034c88a36b3081636c2, type: 3}
@@ -20520,6 +20632,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: table_medium
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24047de89a79812459608c423d402e9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24047de89a79812459608c423d402e9c, type: 3}
 --- !u!1 &1435709131 stripped
@@ -20561,7 +20678,7 @@ GameObject:
   - component: {fileID: 1436508346}
   m_Layer: 0
   m_Name: Plane (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21828,7 +21945,7 @@ GameObject:
   - component: {fileID: 1528066725}
   m_Layer: 0
   m_Name: Plane (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22394,7 +22511,7 @@ GameObject:
   - component: {fileID: 1579866270}
   m_Layer: 0
   m_Name: Plane (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23283,7 +23400,7 @@ GameObject:
   - component: {fileID: 1624587200}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23760,7 +23877,7 @@ GameObject:
   - component: {fileID: 1660738936}
   m_Layer: 0
   m_Name: Plane (17)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23877,7 +23994,7 @@ GameObject:
   - component: {fileID: 1668509471}
   m_Layer: 0
   m_Name: Plane (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24330,6 +24447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cactus_small_B
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d4576dc0782c0e4c80d320a3e04b7bb,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4576dc0782c0e4c80d320a3e04b7bb, type: 3}
 --- !u!1 &1676893988 stripped
@@ -24456,7 +24578,7 @@ GameObject:
   - component: {fileID: 1681449401}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24804,7 +24926,7 @@ GameObject:
   - component: {fileID: 1702192957}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25068,6 +25190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_A_wood (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
@@ -26022,6 +26149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_A_wood (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
 --- !u!4 &1758792109 stripped
@@ -26233,6 +26365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_A_wood (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
@@ -26989,6 +27126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pictureframe_small_B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 355d58f128290284ba99817f6443db3f,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d58f128290284ba99817f6443db3f, type: 3}
 --- !u!4 &1835496338 stripped
@@ -27083,6 +27225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_A_wood (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
@@ -27547,6 +27694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf_A_small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9418f307a1fcc2842bb6f5e666e37814,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9418f307a1fcc2842bb6f5e666e37814, type: 3}
 --- !u!1 &1877777588 stripped
@@ -27974,7 +28126,7 @@ GameObject:
   - component: {fileID: 1925612648}
   m_Layer: 0
   m_Name: Plane (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28375,7 +28527,7 @@ GameObject:
   - component: {fileID: 1953650653}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28546,6 +28698,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_A_wood (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
 --- !u!1 &1960565418 stripped
@@ -28681,7 +28838,7 @@ GameObject:
   - component: {fileID: 1964060014}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29015,7 +29172,7 @@ GameObject:
   - component: {fileID: 1982777592}
   m_Layer: 0
   m_Name: Plane (16)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29990,7 +30147,7 @@ GameObject:
   - component: {fileID: 2058485680}
   m_Layer: 0
   m_Name: Plane (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30084,7 +30241,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e084f304ff7628e4a9056df98103dd20,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e084f304ff7628e4a9056df98103dd20,
         type: 3}
@@ -30155,6 +30312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e084f304ff7628e4a9056df98103dd20,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e084f304ff7628e4a9056df98103dd20, type: 3}
@@ -30572,7 +30734,7 @@ GameObject:
   - component: {fileID: 2090115059}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30670,7 +30832,7 @@ GameObject:
   - component: {fileID: 2098346548}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30862,7 +31024,7 @@ GameObject:
   - component: {fileID: 2117477361}
   m_Layer: 0
   m_Name: Plane (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31333,6 +31495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_A_wood (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
 --- !u!4 &2137130538 stripped
@@ -31446,6 +31613,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair_A_wood (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e09426811b41390419757f111a532261,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09426811b41390419757f111a532261, type: 3}
@@ -31660,6 +31832,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: armchair_pillows
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f602689152d480a44a6469585ed0aba5,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f602689152d480a44a6469585ed0aba5, type: 3}
 --- !u!1 &2142827049 stripped
@@ -31773,6 +31950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pictureframe_small_B (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 355d58f128290284ba99817f6443db3f,
+        type: 3}
+      propertyPath: m_TagString
+      value: wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 355d58f128290284ba99817f6443db3f, type: 3}

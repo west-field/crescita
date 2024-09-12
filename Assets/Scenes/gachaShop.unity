@@ -1371,7 +1371,7 @@ GameObject:
   - component: {fileID: 193060492}
   m_Layer: 0
   m_Name: Plane_LeftForward
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2851,7 +2851,7 @@ GameObject:
   - component: {fileID: 423024649}
   m_Layer: 0
   m_Name: Plane_Left_Forward
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2949,7 +2949,7 @@ GameObject:
   - component: {fileID: 444691147}
   m_Layer: 0
   m_Name: Plane_Left_Back
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3047,7 +3047,7 @@ GameObject:
   - component: {fileID: 466452754}
   m_Layer: 0
   m_Name: Plane_Right_Back
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3518,7 +3518,7 @@ GameObject:
   - component: {fileID: 530492737}
   m_Layer: 0
   m_Name: Plane_ForwardLeft
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4980,7 +4980,7 @@ GameObject:
   - component: {fileID: 769085056}
   m_Layer: 0
   m_Name: Plane_gacha_Left
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5214,7 +5214,7 @@ GameObject:
   - component: {fileID: 769339716}
   m_Layer: 0
   m_Name: Plane_Left
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5589,7 +5589,7 @@ GameObject:
   - component: {fileID: 814072844}
   m_Layer: 0
   m_Name: Plane_gacha_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5687,7 +5687,7 @@ GameObject:
   - component: {fileID: 826838548}
   m_Layer: 0
   m_Name: Plane_Left_Forward
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8308,7 +8308,7 @@ GameObject:
   - component: {fileID: 1487461264}
   m_Layer: 0
   m_Name: Plane_Right_Forward
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8579,7 +8579,7 @@ GameObject:
   - component: {fileID: 1576828487}
   m_Layer: 0
   m_Name: Plane_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8677,7 +8677,7 @@ GameObject:
   - component: {fileID: 1582421003}
   m_Layer: 0
   m_Name: Plane _gacha_Forward
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9119,7 +9119,7 @@ GameObject:
   - component: {fileID: 1712537198}
   m_Layer: 0
   m_Name: Plane_Forward
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9675,7 +9675,7 @@ GameObject:
   - component: {fileID: 1829926069}
   m_Layer: 0
   m_Name: Plane_Back
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
