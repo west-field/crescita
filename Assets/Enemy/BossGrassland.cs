@@ -65,7 +65,7 @@ public class BossGrassland : MonoBehaviourPunCallbacks, IPunObservable
 
         hpBarObject.SetActive(false);
 
-        enemyStartas.Init(50, 20, 1.0f, 100, 100);
+        enemyStartas.Init(100, 20, 1.0f, 200, 200);
 
         isDeath = false;
         isMove = false;

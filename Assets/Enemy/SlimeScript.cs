@@ -56,7 +56,7 @@ public class SlimeScript : MonoBehaviourPunCallbacks, IPunObservable
 
     void Start()
     {
-        enemyScript.Init(8, 5, 1.3f, 5, 5);
+        enemyScript.Init(10, 5, 1.3f, 50, 20);
 
         animator = slime.GetComponent<Animator>();
         animator.SetBool("strong", enemyScript.IsStrong());
