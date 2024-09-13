@@ -9,9 +9,9 @@ using UnityEngine.InputSystem;
 public class endCreditsScript : MonoBehaviour
 {
     //テキストのスクロールスピード
-    [SerializeField] private float textScrollSpeed = 30.0f;
+    private const float textScrollSpeed = 30.0f;
     //テキストの制限位置
-    [SerializeField] private float limitPosition = 900.0f;
+    private const float limitPosition = 900.0f;
 
     //エンドロールが終了したかどうか
     private bool isStopEndRoll;

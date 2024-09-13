@@ -5757,6 +5757,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 788112918}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &788112920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 788112918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &804070451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8602,12 +8608,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc, type: 3}
   itemData: {fileID: 11400000, guid: 50d60df121541324f857785c378f1470, type: 2}
-  audioSource: {fileID: 2123672790}
+  myGold: {fileID: 788112920}
   pauseSound: {fileID: 8300000, guid: 5717e8bd83e40144fa81ad81b4a08b00, type: 3}
   moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
-  noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
-  scaling: {fileID: 188584403}
   sellSound: {fileID: 8300000, guid: 4b79d4f9267335449a5d0c8e41fe4452, type: 3}
+  noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
+  selectFrame: {fileID: 374217734}
+  scaling: {fileID: 188584403}
 --- !u!1001 &1203604237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10174,12 +10181,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc, type: 3}
   itemData: {fileID: 11400000, guid: 50d60df121541324f857785c378f1470, type: 2}
-  audioSource: {fileID: 2123672790}
+  myGold: {fileID: 2063649163}
   pauseSound: {fileID: 8300000, guid: 5717e8bd83e40144fa81ad81b4a08b00, type: 3}
   moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
-  noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
-  scaling: {fileID: 188584403}
   buySound: {fileID: 8300000, guid: 1a59689c5d606d74990a570c7bda459a, type: 3}
+  noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
+  selectFrame: {fileID: 2081488479}
+  scaling: {fileID: 188584403}
 --- !u!1001 &1504352271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15200,6 +15208,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2063649161}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2063649163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2063649161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2081488478
 GameObject:
   m_ObjectHideFlags: 0
@@ -15745,7 +15759,6 @@ GameObject:
   - component: {fileID: 2123672787}
   - component: {fileID: 2123672789}
   - component: {fileID: 2123672790}
-  - component: {fileID: 2123672791}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -15838,7 +15851,6 @@ MonoBehaviour:
   sellPanelObj: {fileID: 1165041190}
   itemSave: {fileID: 1753555556}
   selectFrame: {fileID: 2017264238}
-  audioSource: {fileID: 2123672790}
   openingClosingSound: {fileID: 8300000, guid: 66c0b1288cf5f0b4292ec4ce19f8f453, type: 3}
   moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
   scalingScript: {fileID: 188584403}
@@ -15938,22 +15950,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2123672791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123672785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32454485ea544e14aa716e20dd0a28f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc, type: 3}
-  itemData: {fileID: 11400000, guid: 50d60df121541324f857785c378f1470, type: 2}
-  audioSource: {fileID: 2123672790}
-  pauseSound: {fileID: 8300000, guid: 5717e8bd83e40144fa81ad81b4a08b00, type: 3}
-  moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
-  noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
-  scaling: {fileID: 188584403}

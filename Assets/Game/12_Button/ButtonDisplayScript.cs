@@ -17,28 +17,28 @@ public class ButtonDisplayScript : MonoBehaviour
     /// <summary>
     /// ボタンの種類
     /// </summary>
-    private enum inputAction
+    private enum InputAction
     {
-        run,
-        fire,
-        back,
-        jump,
-        block,
-        sit,
-        pause,
-        map,
+        Run,
+        Fire,
+        Back,
+        Jump,
+        Block,
+        Sit,
+        Pause,
+        Map,
 
-        max
+        Max
     }
     /// <summary>
     /// アクション
     /// </summary>
-    private InputAction[] action = new InputAction[(int)inputAction.max];
+    private UnityEngine.InputSystem.InputAction[] action = new UnityEngine.InputSystem.InputAction[(int)InputAction.Max];
 
     /// <summary>
     /// ボタン
     /// </summary>
-    [SerializeField] private ChangeButtonSprite[] sprite = new ChangeButtonSprite[(int)inputAction.max];
+    [SerializeField] private ChangeButtonSprite[] sprite = new ChangeButtonSprite[(int)InputAction.Max];
 
     private void Start()
     {
@@ -47,14 +47,14 @@ public class ButtonDisplayScript : MonoBehaviour
         //MainManagerを取得する
         manager = GameObject.Find("Manager").GetComponent<MainManager>();
         //アクションマップからアクションを取得する
-        action[(int)inputAction.run] = manager.GetPlayerInput().actions["run"];
-        action[(int)inputAction.fire] = manager.GetPlayerInput().actions["fire"];
-        action[(int)inputAction.back] = manager.GetPlayerInput().actions["back"];
-        action[(int)inputAction.jump] = manager.GetPlayerInput().actions["jump"];
-        action[(int)inputAction.block] = manager.GetPlayerInput().actions["block"];
-        action[(int)inputAction.sit] = manager.GetPlayerInput().actions["sit"];
-        action[(int)inputAction.pause] = manager.GetPlayerInput().actions["pause"];
-        action[(int)inputAction.map] = manager.GetPlayerInput().actions["map"];
+        action[(int)InputAction.Run] = manager.GetPlayerInput().actions["run"];
+        action[(int)InputAction.Fire] = manager.GetPlayerInput().actions["fire"];
+        action[(int)InputAction.Back] = manager.GetPlayerInput().actions["back"];
+        action[(int)InputAction.Jump] = manager.GetPlayerInput().actions["jump"];
+        action[(int)InputAction.Block] = manager.GetPlayerInput().actions["block"];
+        action[(int)InputAction.Sit] = manager.GetPlayerInput().actions["sit"];
+        action[(int)InputAction.Pause] = manager.GetPlayerInput().actions["pause"];
+        action[(int)InputAction.Map] = manager.GetPlayerInput().actions["map"];
     }
 
     private void Update()
@@ -65,7 +65,7 @@ public class ButtonDisplayScript : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < (int)inputAction.max; i++)
+        for (int i = 0; i < (int)InputAction.Max; i++)
         {
             Pressed(action[i], sprite[i]);
         }
@@ -76,7 +76,7 @@ public class ButtonDisplayScript : MonoBehaviour
     /// </summary>
     /// <param name="action">アクション</param>
     /// <param name="gameObject">押されている時に黒くする</param>
-    private void Pressed(InputAction action, ChangeButtonSprite gameObject)
+    private void Pressed(UnityEngine.InputSystem.InputAction action, ChangeButtonSprite gameObject)
     {
         gameObject.ChangingSprite(action.IsPressed());
     }

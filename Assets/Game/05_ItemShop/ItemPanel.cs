@@ -33,7 +33,7 @@ public class ItemPanel : MonoBehaviour
     private PanelName drawType;//いま表示しているもの
 
     /*音*/
-    [SerializeField] private AudioSource audioSource;//サウンド
+    private AudioSource audioSource;//サウンド
     [SerializeField] private AudioClip openingClosingSound, moveSound;//開くときの音,カーソル移動音
 
     private bool isFirst = true;
@@ -61,6 +61,11 @@ public class ItemPanel : MonoBehaviour
         Time.timeScale = 1f;
 
         itemSave.SaveItemData();
+    }
+
+    private void Awake()
+    {
+        audioSource = this.GetComponent<AudioSource>();
     }
 
     private void Start()

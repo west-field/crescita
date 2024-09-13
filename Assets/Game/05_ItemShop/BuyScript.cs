@@ -64,7 +64,7 @@ public class BuyScript : MonoBehaviour
     /// <summary>
     /// サウンド
     /// </summary>
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
     /// <summary>
     /// 音
     /// </summary>
@@ -120,6 +120,11 @@ public class BuyScript : MonoBehaviour
     {
         scaling.Init(0.9f, 0.7f);
         slotObj.Clear();//作成したアイテムのスロットを削除する
+    }
+
+    private void Awake()
+    {
+        audioSource = this.GetComponent<Transform>().parent.GetComponent<AudioSource>();
     }
 
     private void Start()

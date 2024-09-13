@@ -15,7 +15,7 @@ public class pausePanelScript : MonoBehaviourPunCallbacks
     /// <summary>
     /// ポーズパネル
     /// </summary>
-    [SerializeField] private GameObject pausePanel;
+    private GameObject pausePanel;
     /// <summary>
     /// アイテム表示パネルプレハブ
     /// </summary>
@@ -50,7 +50,7 @@ public class pausePanelScript : MonoBehaviourPunCallbacks
     /// <summary>
     /// サウンド
     /// </summary>
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
     /// <summary>
     /// ポーズを開くときの音,カーソル移動音
     /// </summary>
@@ -106,6 +106,9 @@ public class pausePanelScript : MonoBehaviourPunCallbacks
 
     void Start()
     {
+        pausePanel = this.gameObject;
+
+        audioSource = this.GetComponent<AudioSource>();
         //サウンドの音量を設定した音量に変更する
         audioSource.volume = HoldVariable.SEVolume;
         //表示されたときに音を鳴らす

@@ -37,7 +37,6 @@ public class miniMapScaling : MonoBehaviour
     /// </summary>
     private float scale;
 
-    // Start is called before the first frame update
     void Start()
     {
         mainManager = GameObject.Find("Manager").GetComponent<MainManager>();

@@ -68,7 +68,7 @@ public class GachaScript : MonoBehaviour
     InputAction Navigate,Submit, Cancel;//移動,決定,キャンセル
 
     /*音*/
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
     [SerializeField] private AudioClip moveSound, submitSound, gachaSound, cancelSound;//移動音、決定音、回している時の音、キャンセル音
 
     /*アイテム*/
@@ -182,6 +182,11 @@ public class GachaScript : MonoBehaviour
         Time.timeScale = 1f;
         gachaResultPanelObj.SetActive(false);
         confirmObj.SetActive(false);
+    }
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()

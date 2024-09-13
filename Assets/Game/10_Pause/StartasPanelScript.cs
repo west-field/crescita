@@ -11,28 +11,45 @@ public class StartasPanelScript : MonoBehaviour
     /*自身のステータス*/
     [SerializeField]　private PlayerStartas playerStartas;
 
-    /*自身の名前*/
-    [SerializeField]　private TextMeshProUGUI myName;
+    private enum Startas
+    {
+        Name,
+        Level,
+        LevelPoint,
+        NextLevelPoint,
+        MaxHp,
+        Attack,
+        Defense,
+        WeaponAttack,
+        ArmorPower,
 
-    /*今のレベル*/
-    [SerializeField]　private TextMeshProUGUI level;
-    [SerializeField]　private TextMeshProUGUI levelPoint;
-    [SerializeField]　private TextMeshProUGUI nextLevelPoint;
+        Max
+    }
 
-    /*最大HP*/
-    [SerializeField]　private TextMeshProUGUI maxHp;
+    [SerializeField] private TextMeshProUGUI[] startas = new TextMeshProUGUI[(int)Startas.Max];
 
-    /*攻撃力*/
-    [SerializeField]　private TextMeshProUGUI attack;
+    ///*自身の名前*/
+    //[SerializeField]　private TextMeshProUGUI myName;
 
-    /*防御力*/
-    [SerializeField]　private TextMeshProUGUI defense;
+    ///*今のレベル*/
+    //[SerializeField]　private TextMeshProUGUI level;
+    //[SerializeField]　private TextMeshProUGUI levelPoint;
+    //[SerializeField]　private TextMeshProUGUI nextLevelPoint;
 
-    /*武器攻撃力*/
-    [SerializeField]　private TextMeshProUGUI weaponAttack;
+    ///*最大HP*/
+    //[SerializeField]　private TextMeshProUGUI maxHp;
 
-    /*防具防御力*/
-    [SerializeField]　private TextMeshProUGUI armorPower;
+    ///*攻撃力*/
+    //[SerializeField]　private TextMeshProUGUI attack;
+
+    ///*防御力*/
+    //[SerializeField]　private TextMeshProUGUI defense;
+
+    ///*武器攻撃力*/
+    //[SerializeField]　private TextMeshProUGUI weaponAttack;
+
+    ///*防具防御力*/
+    //[SerializeField]　private TextMeshProUGUI armorPower;
 
     //アクティブになった時
     private void OnEnable()
@@ -47,23 +64,23 @@ public class StartasPanelScript : MonoBehaviour
             break;
         }
 
-        level.text = $"LV{playerStartas.GetLevel()}";
-        levelPoint.text = $"{playerStartas.GetLevelPoint()}";
-        nextLevelPoint.text = $"あと{playerStartas.GetNextLevelPoint()}";
+        startas[(int)Startas.Level].text = $"LV{playerStartas.GetLevel()}";
+        startas[(int)Startas.LevelPoint].text = $"{playerStartas.GetLevelPoint()}";
+        startas[(int)Startas.NextLevelPoint].text = $"あと{playerStartas.GetNextLevelPoint()}";
 
-        maxHp.text = $"{playerStartas.GetMaxHp()}";
+        startas[(int)Startas.MaxHp].text = $"{playerStartas.GetMaxHp()}";
 
-        attack.text = $"{playerStartas.GetMyAttackPower()}";
+        startas[(int)Startas.Attack].text = $"{playerStartas.GetMyAttackPower()}";
 
-        defense.text = $"{playerStartas.GetMyDefensePower()}";
+        startas[(int)Startas.Defense].text = $"{playerStartas.GetMyDefensePower()}";
 
-        weaponAttack.text = $"{playerStartas.GetWeponPower()}";
+        startas[(int)Startas.WeaponAttack].text = $"{playerStartas.GetWeponPower()}";
 
-        armorPower.text = $"{playerStartas.GetArmorPower()}";
+        startas[(int)Startas.ArmorPower].text = $"{playerStartas.GetArmorPower()}";
     }
 
     private void Start()
     {
-        myName.text = HoldVariable.playerName;
+        startas[(int)Startas.Name].text = HoldVariable.playerName;
     }
 }

@@ -682,15 +682,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStartas: {fileID: 2571950201517107608, guid: f407dcb5a7a23684694b30a0738443fd,
     type: 3}
-  myName: {fileID: 7581771834623298970}
-  level: {fileID: 4704846361372446757}
-  levelPoint: {fileID: 1739788354341228721}
-  nextLevelPoint: {fileID: 8245993389869009429}
-  maxHp: {fileID: 4602952380265624477}
-  attack: {fileID: 1878556501726483698}
-  defense: {fileID: 6395234974548987744}
-  weaponAttack: {fileID: 4029092368259513976}
-  armorPower: {fileID: 4896025651824207189}
+  startas:
+  - {fileID: 7581771834623298970}
+  - {fileID: 4704846361372446757}
+  - {fileID: 1739788354341228721}
+  - {fileID: 8245993389869009429}
+  - {fileID: 4602952380265624477}
+  - {fileID: 1878556501726483698}
+  - {fileID: 6395234974548987744}
+  - {fileID: 4029092368259513976}
+  - {fileID: 4896025651824207189}
 --- !u!1 &2414433886861325553
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +917,7 @@ GameObject:
   - component: {fileID: 1328147474121261423}
   - component: {fileID: 8584181656896450781}
   m_Layer: 5
-  m_Name: PowerText
+  m_Name: AttackPowerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

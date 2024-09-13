@@ -59,7 +59,7 @@ public class SellScript : MonoBehaviour
     /// <summary>
     /// ƒTƒEƒ“ƒh
     /// </summary>
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
     /// <summary>
     /// ‰¹
     /// </summary>
@@ -115,6 +115,11 @@ public class SellScript : MonoBehaviour
     {
         scaling.Init(0.9f, 0.7f);
         slotObj.Clear();
+    }
+
+    private void Awake()
+    {
+        audioSource = this.GetComponent<Transform>().parent.GetComponent<AudioSource>();
     }
 
     private void Start()
