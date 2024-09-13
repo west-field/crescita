@@ -175,7 +175,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     /// <summary>
     /// サウンドを鳴らす
     /// </summary>
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource audioSource;
     /// <summary>
     /// 効果音
     /// </summary>
@@ -304,6 +304,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         item = this.gameObject.GetComponent<PlayerItem>();
         startas = this.gameObject.GetComponent<PlayerStartas>();
 
+        audioSource = this.GetComponent<AudioSource>();
         //サウンドの音量を変更する
         audioSource.volume = HoldVariable.SEVolume;
 

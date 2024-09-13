@@ -11,9 +11,9 @@ public class CameraScript : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject target;//注視点(プレイヤー)
     private Vector3 offset;//ターゲットからのオフセット
 
-    private float distance; // 後続の物体との距離
-    private float polarAngle; // y軸との角度
-    private float azimuthalAngle; // x軸との角度
+    private const float distance = 7.0f; // 後続の物体との距離
+    private const float polarAngle = -40.0f; // y軸との角度
+    private const float azimuthalAngle = 90.0f; // x軸との角度
 
     void Start()
     {
@@ -28,10 +28,6 @@ public class CameraScript : MonoBehaviourPunCallbacks
         }
 
         offset = new Vector3(0.0f, 0.1f, 0.0f);
-
-        distance = 7.0f;//ターゲットとの距離
-        polarAngle = -40.0f;//y軸の角度
-        azimuthalAngle = 90.0f;//x軸の角度
     }
 
     private void Update()

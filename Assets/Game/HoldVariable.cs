@@ -34,6 +34,7 @@ public class HoldVariable : MonoBehaviour
 
     private void Awake()
     {
+        //‰¹—Ê‚ð”¼•ª‚É
         BGMVolume = 0.5f;
         SEVolume = 0.5f;
     }
