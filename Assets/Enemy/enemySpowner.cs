@@ -12,7 +12,7 @@ public class enemySpowner : MonoBehaviour
     private GameObject enemy;
 
     /*次に敵が出現するまでの時間*/
-    [SerializeField]　private float nextTime = 60.0f;
+    private const float nextTime = 60.0f;
     //待ち時間計測
     private float elapsedTime;
     //敵の最大数
@@ -50,7 +50,10 @@ public class enemySpowner : MonoBehaviour
 
         if (enemy == null)
         {
-            numberOfEnemys--;
+            if (numberOfEnemys - 1 >= 0)
+            {
+                numberOfEnemys--;
+            }
         }
 
         //出現する最大数を超えていたら何もしない

@@ -8,20 +8,18 @@ using Photon.Pun;
 /// </summary>
 public class bushSpowner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject prefab;//スポーンさせたいオブジェクト
-    GameObject obj;//実際に作ったオブジェクト
+    [SerializeField] private GameObject prefab;//スポーンさせたいオブジェクト
+    private GameObject obj;//実際に作ったオブジェクト
 
     /*次に出現するまでの時間*/
-    [SerializeField]
-    private float nextTime = 60.0f;
+    private const float nextTime = 60.0f;
     //待ち時間計測
     private float elapsedTime;
     //スポーン数(最大数)
-    private const int maxNumOfEnemiys = 1;
+    private const int maxSpown = 1;
 
     //今いくつ出現させたか
-    private int numberOfEnemys;
+    private int spown;
 
     void Start()
     {
@@ -51,11 +49,14 @@ public class bushSpowner : MonoBehaviour
 
         if (obj == null)
         {
-            numberOfEnemys--;
+            if (spown - 1 >= 0)
+            {
+                spown--;
+            }
         }
 
         //出現する最大数を超えていたら何もしない
-        if (numberOfEnemys >= maxNumOfEnemiys)
+        if (spown >= maxSpown)
         {
             return;
         }
@@ -84,7 +85,7 @@ public class bushSpowner : MonoBehaviour
             obj = Instantiate(prefab, this.transform.position, Quaternion.identity);
         }
 
-        numberOfEnemys++;
+        spown++;
         elapsedTime = 0.0f;
     }
 }

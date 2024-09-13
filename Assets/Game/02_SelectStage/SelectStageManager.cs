@@ -9,10 +9,19 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class SelectStageManager : MonoBehaviour
 {
-    //選択できるImageを取得
-    [SerializeField] private GameObject city, grassland, plain;//町、草原、草原
+    private enum Stage
+    {
+        Grassland,
+        City,
+        Plain,
 
-    private static int selectNum = 3;//選択できるステージの数
+        Max
+    }
+
+    //選択できるImageを取得
+    [SerializeField] private GameObject[] stage = new GameObject[(int)Stage.Max];
+
+    private const int selectNum = (int)Stage.Max;//選択できるステージの数
     private int selectCount;
 
     [SerializeField] private MainManager mainManager;
@@ -29,27 +38,25 @@ public class SelectStageManager : MonoBehaviour
     [SerializeField] private Transform selectFrame;
     [SerializeField] private Scaling scaling;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         select = mainManager.GetPlayerInput().actions["move"];
         direction = mainManager.GetPlayerInput().actions["fire"];
 
         value = select.ReadValue<Vector2>();
 
-        selectCount = 0;
+        selectCount = (int)Stage.City;
         ChangeSelect(selectCount);
 
         isSelect = false;
 
         scaling.Init(1.3f, 1.0f);
-        scaling.ScalingObjPosition(selectFrame, city.transform.position);
 
         audioSource.volume = HoldVariable.SEVolume;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         scaling.ScalingObj(selectFrame);
         //決定を押していたら処理をしない
@@ -90,34 +97,27 @@ public class SelectStageManager : MonoBehaviour
     }
 
     //選択している場所を分かりやすくする
-    void ChangeSelect(int select)
+    private void ChangeSelect(int select)
     {
+        //リセットする
+        for (int i = 0; i < selectNum; i++)
+        {
+            stage[i].SetActive(true);
+        }
+
         switch (select)
         {
-            case 0://シティを選択
-                city.SetActive(false);
-                scaling.ScalingObjPosition(selectFrame, city.transform.position);
-
-                grassland.SetActive(true);
-
-                plain.SetActive(true);
-
+            case (int)Stage.City://シティを選択
+                stage[(int)Stage.City].SetActive(false);
+                scaling.ScalingObjPosition(selectFrame, stage[(int)Stage.City].transform.position);
                 break;
-            case 1://草原を選択
-                city.SetActive(true);
-
-                grassland.SetActive(false);
-                scaling.ScalingObjPosition(selectFrame, grassland.transform.position);
-
-                plain.SetActive(true);
+            case (int)Stage.Grassland://草原を選択
+                stage[(int)Stage.Grassland].SetActive(false);
+                scaling.ScalingObjPosition(selectFrame, stage[(int)Stage.Grassland].transform.position);
                 break;
-            case 2://平原を選択
-                city.SetActive(true);
-
-                grassland.SetActive(true);
-
-                plain.SetActive(false);
-                scaling.ScalingObjPosition(selectFrame, plain.transform.position);
+            case (int)Stage.Plain://平原を選択
+                stage[(int)Stage.Plain].SetActive(false);
+                scaling.ScalingObjPosition(selectFrame, stage[(int)Stage.Plain].transform.position);
                 break;
             default:
                 break;
@@ -129,19 +129,19 @@ public class SelectStageManager : MonoBehaviour
     {
         switch (select)
         {
-            case 0://シティを選択
+            case (int)Stage.City://シティを選択
                 mainManager.ChangeScene("city");
                 //位置を変更
                 HoldVariable.playerPosision = new Vector3(0.0f, 1.0f, 22.0f);
                 HoldVariable.playerRotate = Quaternion.Euler(0, 180, 0);
                 break;
-            case 1://草原を選択
+            case (int)Stage.Grassland://草原を選択
                 mainManager.ChangeScene("grassland");
                 //位置を変更
                 HoldVariable.playerPosision = new Vector3(0.0f, 0.01f, 0.0f);
                 HoldVariable.playerRotate = Quaternion.Euler(0, 0, 0);
                 break;
-            case 2://平原を選択
+            case (int)Stage.Plain://平原を選択
                 mainManager.ChangeScene("onlineRoom");
                 //位置を変更
                 HoldVariable.playerPosision = new Vector3(0.0f, 0.01f, 0.0f);

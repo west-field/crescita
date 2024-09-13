@@ -36,16 +36,19 @@ public class rogin : MonoBehaviour
     /// <summary>
     /// データのロードをするため
     /// </summary>
-    [SerializeField] private ItemDataLoadOrSave itemData;
+    private ItemDataLoadOrSave itemData;
     /// <summary>
     /// ステータスをロードするため
     /// </summary>
-    [SerializeField] private StartasLoadOrSave startas;
+    private StartasLoadOrSave startas;
 
     void Start()
     {
         isLogin = false;
         isLoginData = false;
+
+        itemData = this.GetComponent<ItemDataLoadOrSave>();
+        startas = this.GetComponent<StartasLoadOrSave>();
     }
 
     private void Update()

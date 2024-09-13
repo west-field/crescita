@@ -8,7 +8,7 @@ using TMPro;
 /// </summary>
 public class titleManager : MonoBehaviour
 {
-    [SerializeField] private MainManager manager;//メインマネージャー
+    private MainManager manager;//メインマネージャー
     private InputAction move,submit, cancel;//アクションマップからアクションの取得
 
     private bool isSubmit;//決定を押したかどうか
@@ -27,18 +27,16 @@ public class titleManager : MonoBehaviour
 
     /*名前、パスワード*/
     [SerializeField] private TMP_InputField enterName, enterPass;//名前の入力,パスワードの入力
-    /// <summary>
-    /// 名前の入力を選択しているか
-    /// </summary>
-    private bool isName;
+    private bool isName;/// 名前の入力を選択しているか
     private bool isLogin;//ログインできるかどうか
-    [SerializeField] private rogin roginScript;//通信
+    private rogin roginScript;//通信
     [SerializeField] private TextMeshProUGUI nextText;//InputFieldの下にあるテキスト
 
     /*音*/
     [Header("Sound")]
     [SerializeField] private AudioSource audioSource;//サウンド
-    [SerializeField] private AudioClip directionSound, noGoodSound;//押したときの音,ダメな時の音
+    [SerializeField] private AudioClip directionSound;//押したときの音
+    [SerializeField] private AudioClip noGoodSound;//ダメな時の音
 
     [Header("Frame")]
     /// <summary>
@@ -48,7 +46,7 @@ public class titleManager : MonoBehaviour
     /// <summary>
     /// フレームの拡大縮小
     /// </summary>
-    [SerializeField] private Scaling scalingScprit;
+    private Scaling scalingScprit;
     /// <summary>
     /// フレームの位置を取得
     /// </summary>
@@ -71,12 +69,17 @@ public class titleManager : MonoBehaviour
 
     void Start()
     {
+        manager = this.GetComponent<MainManager>();
+
         move = manager.GetPlayerInput().actions["move"];
         submit = manager.GetPlayerInput().actions["fire"];
         cancel = manager.GetPlayerInput().actions["back"];
 
+        roginScript = this.GetComponent<rogin>();
+
         audioSource.volume = HoldVariable.SEVolume;
 
+        scalingScprit = this.GetComponent<Scaling>();
         scalingScprit.Init(0.9f, 0.7f);
 
         menuItem = MenuItem.create;

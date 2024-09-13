@@ -487,7 +487,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
 
             //ŠÔ‚ğŒ¸‚ç‚·
             levelUpCount--;
-            Debug.Log(levelUpCount);
+            //Debug.Log(levelUpCount);
 
             //ƒ¿’l‚ª0‚æ‚è‚à¬‚³‚¢‚Æ‚«
             if (color.a <= 0.0f)

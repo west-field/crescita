@@ -8,13 +8,12 @@ using UnityEngine;
 public class ItemNameDisplayScript : MonoBehaviour
 {
     //α値変更スピード
-    private float alphaSpeed;
+    private const float alphaSpeed = 0.1f;
     //変更する
     private CanvasGroup itemNameCanvas;
     
     private void Start()
     {
-        alphaSpeed = 0.1f;
         itemNameCanvas = this.GetComponent<CanvasGroup>();
         itemNameCanvas.alpha = 1;
     }

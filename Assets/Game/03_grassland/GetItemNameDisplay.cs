@@ -14,11 +14,6 @@ public class GetItemNameDisplay : MonoBehaviour
     //作成した名前リスト
     private List<GameObject> itemNameDisplayList = new List<GameObject>();
 
-    private void Start()
-    {
-
-    }
-
     /// <summary>
     /// アイテムを取得したとき名前を画面に表示させる
     /// </summary>

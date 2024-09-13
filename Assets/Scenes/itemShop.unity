@@ -996,7 +996,7 @@ RectTransform:
   m_Children:
   - {fileID: 936256774}
   m_Father: {fileID: 1165041191}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2243,12 +2243,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a65882662b4fe2d46b4426254c982bd9,
     type: 3}
   m_PrefabInstance: {fileID: 319687099}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &327226515 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 788112918}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &335467086
 GameObject:
@@ -5561,12 +5555,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746189604}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &765286744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2063649161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &788112918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5637,7 +5625,7 @@ PrefabInstance:
     - target: {fileID: 8344646790875427736, guid: df45b478e91ddd04cb6930637ac099fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8344646790875427736, guid: df45b478e91ddd04cb6930637ac099fc,
         type: 3}
@@ -8551,8 +8539,8 @@ RectTransform:
   m_Children:
   - {fileID: 374217734}
   - {fileID: 987881185}
-  - {fileID: 109682701}
   - {fileID: 788112919}
+  - {fileID: 109682701}
   - {fileID: 1388210821}
   m_Father: {fileID: 2123672786}
   m_RootOrder: 5
@@ -8614,14 +8602,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc, type: 3}
   itemData: {fileID: 11400000, guid: 50d60df121541324f857785c378f1470, type: 2}
-  myGold: {fileID: 327226515}
   audioSource: {fileID: 2123672790}
   pauseSound: {fileID: 8300000, guid: 5717e8bd83e40144fa81ad81b4a08b00, type: 3}
   moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
-  sellSound: {fileID: 8300000, guid: 4b79d4f9267335449a5d0c8e41fe4452, type: 3}
   noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
-  selectFrame: {fileID: 374217734}
   scaling: {fileID: 188584403}
+  sellSound: {fileID: 8300000, guid: 4b79d4f9267335449a5d0c8e41fe4452, type: 3}
 --- !u!1001 &1203604237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10188,14 +10174,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc, type: 3}
   itemData: {fileID: 11400000, guid: 50d60df121541324f857785c378f1470, type: 2}
-  myGold: {fileID: 765286744}
   audioSource: {fileID: 2123672790}
   pauseSound: {fileID: 8300000, guid: 5717e8bd83e40144fa81ad81b4a08b00, type: 3}
   moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
-  buySound: {fileID: 8300000, guid: 1a59689c5d606d74990a570c7bda459a, type: 3}
   noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
-  selectFrame: {fileID: 2081488479}
   scaling: {fileID: 188584403}
+  buySound: {fileID: 8300000, guid: 1a59689c5d606d74990a570c7bda459a, type: 3}
 --- !u!1001 &1504352271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15761,6 +15745,7 @@ GameObject:
   - component: {fileID: 2123672787}
   - component: {fileID: 2123672789}
   - component: {fileID: 2123672790}
+  - component: {fileID: 2123672791}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -15953,3 +15938,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2123672791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123672785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32454485ea544e14aa716e20dd0a28f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slot: {fileID: 8344646790875427719, guid: df45b478e91ddd04cb6930637ac099fc, type: 3}
+  itemData: {fileID: 11400000, guid: 50d60df121541324f857785c378f1470, type: 2}
+  audioSource: {fileID: 2123672790}
+  pauseSound: {fileID: 8300000, guid: 5717e8bd83e40144fa81ad81b4a08b00, type: 3}
+  moveSound: {fileID: 8300000, guid: 82613cc4135da794c94179f518235af0, type: 3}
+  noSound: {fileID: 8300000, guid: aab88ee895a4edd4dad58dade5f1e095, type: 3}
+  scaling: {fileID: 188584403}
