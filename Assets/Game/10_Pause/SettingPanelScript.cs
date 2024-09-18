@@ -230,9 +230,6 @@ public class SettingPanelScript : MonoBehaviour
                     selectNum = 0;
                     break;
                 case (int)PauseItem.back:
-                    Destroy(key);
-                    Destroy(sound);
-                    Destroy(window);
 
                     PanelChange(false);
                     break;
