@@ -53,11 +53,11 @@ public class titleManager : MonoBehaviour
     [SerializeField] private Transform createPos, roginPos, settingPos, endPos;
 
     [Header("Menu")]
-    [SerializeField] private GameObject menuPrefab;
-    private GameObject menuObject;
-    private bool isSetting;
+    [SerializeField] private GameObject settingPrefab;//設定プレハブ
+    private GameObject settingObject;//設定を作成
+    private bool isSetting;//設定を開いているか
 
-    private bool isGameEnd;
+    private bool isGameEnd;//ゲームを終了させるかどうか
 
     //選んだ種類
     enum MenuItem
@@ -94,8 +94,8 @@ public class titleManager : MonoBehaviour
         menuItem = MenuItem.create;
         scalingScprit.ScalingObjPosition(selectFrame.transform, createPos.position);
 
-        menuObject = Instantiate(menuPrefab);
-        menuObject.SetActive(false);
+        settingObject = Instantiate(settingPrefab);
+        settingObject.SetActive(false);
         isSetting = false;
 
         isGameEnd = false;
@@ -144,7 +144,7 @@ public class titleManager : MonoBehaviour
         //設定画面を開いている時
         if (isSetting)
         {
-            if(!menuObject.activeSelf)
+            if(!settingObject.activeSelf)
             {
                 isSetting = false;
                 Debug.Log("設定終了");
@@ -251,7 +251,7 @@ public class titleManager : MonoBehaviour
     private void Setting()
     {
         isSetting = true;
-        menuObject.SetActive(true);
+        settingObject.SetActive(true);
     }
 
     /// <summary>

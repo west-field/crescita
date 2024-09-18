@@ -34,7 +34,6 @@ public class Scaling : MonoBehaviour
         //今選んでいるオブジェクトの位置とフレームの位置が違うとき
         if (scalingTransform.position != position)
         {
-            Debug.Log(position);
             //位置を合わせる
             scalingTransform.position = position;
             isEnlarge = true;
