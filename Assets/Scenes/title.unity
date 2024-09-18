@@ -3684,7 +3684,7 @@ MonoBehaviour:
   roginPos: {fileID: 256537701}
   settingPos: {fileID: 199036545}
   endPos: {fileID: 700043297}
-  menuPrefab: {fileID: 4262862238501506793, guid: 13f0c6d4fc645c547881f3e44decaae9,
+  settingPrefab: {fileID: 4262862238501506793, guid: 13f0c6d4fc645c547881f3e44decaae9,
     type: 3}
 --- !u!114 &1753555554
 MonoBehaviour:

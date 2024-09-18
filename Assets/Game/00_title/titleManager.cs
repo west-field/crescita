@@ -266,8 +266,7 @@ public class titleManager : MonoBehaviour
             return;
         }
 
-        var value = move.ReadValue<Vector2>();
-        if (Input.GetKeyDown(KeyCode.Tab) || (move.WasPressedThisFrame() && value.y != 0))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             //名前を入力するフォームを選択していた場合はパスワード入力に変更する
             if(isName)
