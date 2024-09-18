@@ -32,11 +32,6 @@ public class npcTalkScript : MonoBehaviour
     /// </summary>
     [SerializeField] private AudioClip talk;
 
-    /// <summary>
-    /// クリックテキストの表示非表示
-    /// </summary>
-    [SerializeField] private GameObject clickText;
-
     void Start()
     {
         decision = manager.GetPlayerInput().actions["fire"];
@@ -49,11 +44,6 @@ public class npcTalkScript : MonoBehaviour
         isChoice = false;
 
         textObj.SetActive(false);
-        
-        if(clickText.activeSelf)
-        {
-            clickText.SetActive(false);
-        }
     }
 
     private void Update()
@@ -81,7 +71,6 @@ public class npcTalkScript : MonoBehaviour
                 isSelect = false;
                 isChoice = false;
                 textObj.SetActive(false);
-                clickText.SetActive(false);
                 return;
             }
         }
@@ -94,7 +83,6 @@ public class npcTalkScript : MonoBehaviour
             Debug.Log("NPC OnTriggerEnter,プレイヤーと当たった");
             textMeshPro.text = text;
             isSelect = true;
-            clickText.SetActive(true);
         }
     }
 
@@ -106,7 +94,6 @@ public class npcTalkScript : MonoBehaviour
             textObj.SetActive(false);
             isSelect = false;
             isChoice = false;
-            clickText.SetActive(false);
         }
     }
 
