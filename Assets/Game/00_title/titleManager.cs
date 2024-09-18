@@ -50,13 +50,22 @@ public class titleManager : MonoBehaviour
     /// <summary>
     /// フレームの位置を取得
     /// </summary>
-    [SerializeField] private Transform createPos, roginPos;
+    [SerializeField] private Transform createPos, roginPos, settingPos, endPos;
+
+    [Header("Menu")]
+    [SerializeField] private GameObject menuPrefab;
+    private GameObject menuObject;
+    private bool isSetting;
+
+    private bool isGameEnd;
 
     //選んだ種類
     enum MenuItem
     { 
         create,
         rogin,
+        setting,
+        end,
 
         menuNum
     };
@@ -67,7 +76,7 @@ public class titleManager : MonoBehaviour
     //MenuItem.setting = 3
     //音量設定、ウィンドウモード変更、キー設定、閉じる、ゲーム終了
 
-    void Start()
+    private void Start()
     {
         manager = this.GetComponent<MainManager>();
 
@@ -84,6 +93,12 @@ public class titleManager : MonoBehaviour
 
         menuItem = MenuItem.create;
         scalingScprit.ScalingObjPosition(selectFrame.transform, createPos.position);
+
+        menuObject = Instantiate(menuPrefab);
+        menuObject.SetActive(false);
+        isSetting = false;
+
+        isGameEnd = false;
 
         Init();
     }
@@ -119,9 +134,27 @@ public class titleManager : MonoBehaviour
     {
         if (manager.IsChangeScene()) return;
 
+        //ゲーム終了するとき
+        if(isGameEnd)
+        {
+            GameEndUpdate();
+            return;
+        }
+
+        //設定画面を開いている時
+        if (isSetting)
+        {
+            if(!menuObject.activeSelf)
+            {
+                isSetting = false;
+                Debug.Log("設定終了");
+            }
+            return;
+        }
+
         scalingScprit.ScalingObj(selectFrame.transform);//拡大縮小
 
-        if(isSubmit)
+        if (isSubmit)
         {
             switch (menuItem)
             {
@@ -129,6 +162,7 @@ public class titleManager : MonoBehaviour
                 case MenuItem.rogin:
                     NameAndPassword();
                     return;
+                case MenuItem.setting:
                 default:
                     return;
             }
@@ -140,13 +174,21 @@ public class titleManager : MonoBehaviour
         {
             var value = move.ReadValue<Vector2>();
             var menuNum = (int)MenuItem.menuNum;
-            if(value.y < 0 || value.x > 0)
+            if (value.x > 0 )
             {
                 menuItem = (MenuItem)(((int)menuItem + 1) % menuNum);
             }
-            else if(value.y > 0 || value.x < 0)
+            else if(value.x < 0)
             {
                 menuItem = (MenuItem)(((int)menuItem + (menuNum - 1)) % menuNum);
+            }
+            else if(value.y < 0)
+            {
+                menuItem = (MenuItem)(((int)menuItem + (menuNum / 2)) % menuNum);
+            }
+            else if(value.y > 0)
+            {
+                menuItem = (MenuItem)(((int)menuItem + (menuNum - (menuNum / 2))) % menuNum);
             }
 
             switch (menuItem)
@@ -158,14 +200,20 @@ public class titleManager : MonoBehaviour
                 case MenuItem.rogin:
                     scalingScprit.ScalingObjPosition(selectFrame.transform, roginPos.position);
                     break;
+                case MenuItem.setting:
+                    scalingScprit.ScalingObjPosition(selectFrame.transform, settingPos.position);
+                    break;
+                case MenuItem.end:
+                    scalingScprit.ScalingObjPosition(selectFrame.transform, endPos.position);
+                    break;
             }
-            
+
         }
 
         //決定を押したとき
         if (submit.WasPressedThisFrame())
         {
-            switch(menuItem)
+            switch (menuItem)
             {
                 case MenuItem.create:
                     Create();
@@ -173,10 +221,37 @@ public class titleManager : MonoBehaviour
                 case MenuItem.rogin:
                     Login();
                     break;
+                case MenuItem.setting:
+                    Setting();
+                    break;
+                case MenuItem.end:
+                    isGameEnd = true;
+                    break;
                 default:
-                    break ;
+                    break;
             }
         }
+    }
+
+    /// <summary>
+    /// ゲーム終了を選んだ時のアップデート
+    /// </summary>
+    private void GameEndUpdate()
+    {
+        if (manager.GameEnd())
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+                    Application.Quit();
+#endif
+        }
+    }
+
+    private void Setting()
+    {
+        isSetting = true;
+        menuObject.SetActive(true);
     }
 
     /// <summary>
@@ -191,7 +266,8 @@ public class titleManager : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Tab))
+        var value = move.ReadValue<Vector2>();
+        if (Input.GetKeyDown(KeyCode.Tab) || (move.WasPressedThisFrame() && value.y != 0))
         {
             //名前を入力するフォームを選択していた場合はパスワード入力に変更する
             if(isName)
