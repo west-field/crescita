@@ -20,10 +20,6 @@ public class titleManager : MonoBehaviour
     /// 名前入力
     /// </summary>
     [SerializeField] private GameObject nameInput;
-    /// <summary>
-    /// タイトルロゴ
-    /// </summary>
-    [SerializeField] private GameObject titleLogo;
 
     /*名前、パスワード*/
     [SerializeField] private TMP_InputField enterName, enterPass;//名前の入力,パスワードの入力
@@ -116,7 +112,6 @@ public class titleManager : MonoBehaviour
         enterPass.text = "12345";
 #endif
         nameInput.SetActive(false);
-        titleLogo.SetActive(true);
 
         isSubmit = false;
 
@@ -222,7 +217,8 @@ public class titleManager : MonoBehaviour
                     Login();
                     break;
                 case MenuItem.setting:
-                    Setting();
+                    isSetting = true;
+                    settingObject.SetActive(true);
                     break;
                 case MenuItem.end:
                     isGameEnd = true;
@@ -246,12 +242,6 @@ public class titleManager : MonoBehaviour
                     Application.Quit();
 #endif
         }
-    }
-
-    private void Setting()
-    {
-        isSetting = true;
-        settingObject.SetActive(true);
     }
 
     /// <summary>
@@ -358,7 +348,6 @@ public class titleManager : MonoBehaviour
 
         isCreate = true;
         nameInput.SetActive(true);
-        titleLogo.SetActive(false);
         isSubmit = true;
     }
     /// <summary>
@@ -371,7 +360,6 @@ public class titleManager : MonoBehaviour
 
         isCreate = false;
         nameInput.SetActive(true);
-        titleLogo.SetActive(false);
         isSubmit = true;
     }
 }
