@@ -77,14 +77,14 @@ public class SelectStageManager : MonoBehaviour
             value = select.ReadValue<Vector2>();//入力値の取得
 
             //選択位置を変更する　次へ
-            if (value.x > 0.0f || value.y > 0.0f)
+            if (value.x > 0.0f)
             {
                 selectCount = (selectCount + 1) % selectNum;
                 //移動音
                 audioSource.PlayOneShot(moveSound);
             }
             //選択位置を変更する　前に
-            else if (value.x < 0.0f || value.y < 0.0f)
+            else if (value.x < 0.0f)
             {
                 selectCount = (selectCount + (selectNum - 1)) % selectNum;
                 //移動音
