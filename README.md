@@ -1,5 +1,5 @@
 ## Name
-crescita
+crescita(クレシタ)
 
 ## DEMO
 [紹介動画](https://www.youtube.com/watch?v=OMxlo33prq8&feature=youtu.be)
