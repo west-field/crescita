@@ -1,5 +1,5 @@
 ## Name
-crescita(クレシタ)
+![TitleLogo](/Assets/Game/00_title/title.jpg)
 
 ## DEMO
 [紹介動画](https://www.youtube.com/watch?v=OMxlo33prq8&feature=youtu.be)
